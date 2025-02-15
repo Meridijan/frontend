@@ -1,0 +1,97 @@
+.HeroSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(245, 245, 245);
+    height: 100vh;
+    background-size: cover;
+    /*background-image: url('../assets/img/bg-image.png');*/
+    background-position: center;
+    position: relative;
+    
+}
+
+.HeroSection h1 {
+    font-size: 99px;
+    font-weight: 800;
+    margin: 0;
+    text-shadow: 0px 10px 5px rgba(0, 0, 0, 0.493);
+}
+
+.HeroSection p {
+    font-size: 25px;
+    font-weight: 400;
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.493);
+    margin: 0;
+}
+
+.HeroSection button {
+    height: 94px;
+    width: 326px;
+    font-size: 38px;
+    font-weight: 600;
+    color: white;
+    border: 5.71px solid #191a48;
+    border-radius: 71px;
+    background: none;
+    backdrop-filter: blur(10px);
+    text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.493);
+    margin-top: 20px;
+    cursor: pointer;
+    padding-bottom: 0.15em;
+    background: linear-gradient(transparent, transparent), linear-gradient(white, white);
+    background-size: 0% 2px;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s ease, background-position 0.3s ease;
+}
+
+.HeroSection button:hover {
+    background-size: 100% 2px;
+    background-position: 50% 100%;
+    backdrop-filter: blur(15px);
+}
+
+/* Scroll Hint Section */
+.ScrollHintContainer {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+/* Left and Right Medieval Lines */
+.ScrollLine {
+    width: 50%; /* Each line covers half of the screen */
+}
+
+/* Center Scroll Button (Arrow inside a circle) */
+.ScrollButton {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.ScrollButton:hover {
+    transform: scale(1.1);
+}
+
+/* Hover Effect for Arrow */
+.ScrollButton svg path {
+    transition: transform 0.3s ease;
+}
+
+.ScrollButton:hover svg path {
+    transform: translateY(3px); /* Slight bounce effect */
+}

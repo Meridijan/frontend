@@ -1,0 +1,276 @@
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
+    background: url('../assets/img/bg-image.png') no-repeat center center fixed; /* Fixed background */
+    background-size: cover;
+}
+
+
+::-webkit-scrollbar{
+    width: 0px;
+    }
+
+
+/* Main */
+
+.Main {
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-image: url('../assets/img/bg-image.png');
+    background-position: top center;
+    height: 80%;
+}
+
+.Main > .Navbar {
+    display: flex;
+    align-items: center;
+    height: 120px;
+    padding: 0 20px;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+}
+
+.Main > .Navbar > a {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    margin: 10px 15px;
+    align-self: center;
+    text-decoration: none;
+    padding-bottom: 0.15em; /* Dovoljno prostora za liniju */
+    background: linear-gradient(transparent, transparent), linear-gradient(white, white);
+    background-size: 0% 2px;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s ease, background-position 0.3s ease;
+}   
+
+.Main > .Navbar > a:hover {
+    background-size: 100% 2px; /* Linija se animira */
+    background-position: 50% 100%;
+    color: white; /* Održava boju teksta */
+}
+
+.Main > .Navbar > a > img {
+    width: 77px;
+}
+
+.Main > .Welcome {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(245, 245, 245);
+}
+
+.Welcome h1 {
+    font-size: 99px;
+    font-weight: 800;
+    margin: 0;
+    text-shadow: 0px 10px 5px rgba(0, 0, 0, 0.493);
+}
+
+.Welcome p {
+    font-size: 25px;
+    font-weight: 400;
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.493);
+    margin: 0;
+}
+
+.Welcome button {
+    height: 94px;
+    width: 326px;
+    font-size: 38px;
+    font-weight: 600;
+    color: white;
+    border: 5.71px solid #191a48;
+    border-radius: 71px;
+    background: none;
+    backdrop-filter: blur(10px);
+    text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.493);
+    margin-top: 20px;
+    cursor: pointer;
+    padding-bottom: 0.15em; /* Dodaj padding za prostor ispod teksta */
+    background: linear-gradient(transparent, transparent), linear-gradient(white, white);
+    background-size: 0% 2px;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s ease, background-position 0.3s ease;
+}
+
+
+
+.Welcome button:hover {
+    background-size: 100% 2px; /* Animira liniju ispod dugmeta */
+    background-position: 50% 100%;
+    backdrop-filter: blur(15px);
+}
+
+
+
+.Main > hr{
+    width: 100%;
+    filter: blur(50);
+}
+
+/* Product Listings */
+
+
+
+
+/* About Us */
+
+.About{
+    margin-left: 35px;
+}
+
+.About h2{
+    margin-top: 100px;
+    margin-bottom: 0;
+    font-size: 41px;
+    font-weight: 700;
+}
+
+.About p{
+    font-size: 41px;
+    font-weight: 400;
+    margin-bottom: 100px;
+    margin-top: 0;
+}
+
+/* Our Goal */
+
+.Goal{
+    text-align: right;
+    background-image: url('../assets/img/bg-image.png') no-repeat center center fixed;
+    color: white;
+    background-position: center center;
+    background-size: cover;
+}
+
+.Blur{
+    backdrop-filter: blur(10px) brightness(60%);
+}
+
+.Goal h2{
+    padding-top: 100px;
+    margin-right: 35px;
+    margin-bottom: 0;
+    font-size: 41px;
+    font-weight: 700;
+}
+
+.Goal p{
+    margin-right: 35px;
+    font-size: 41px;
+    font-weight: 400;
+    padding-bottom: 100px;
+    margin-top: 0;
+}
+
+/* Creators & Beginners */
+
+.Creator{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Beginners{
+    text-align: right;
+    margin-right: 60px;
+}
+
+.Creator > div > h2{
+    padding-top: 100px;
+    margin-bottom: 0;
+    font-size: 41px;
+    font-weight: 700;
+}
+
+.Creator > div > p{
+    font-size: 41px;
+    font-weight: 400;
+    padding-bottom: 100px;
+    margin-top: 0;
+}
+
+.Creators{
+    margin-left: 60px;
+}
+
+
+
+
+/* Board */
+
+.Board {
+    background-color: #1c1c1c; /* Tamna pozadina */
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.Boardmain {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.Boardmain div {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.Boardmain ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.Boardmain > ul > li > p {
+    text-align: left;
+    font-size: 30px;
+    font-weight: 400;
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.Boardmain ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    text-align: left;
+    font-size: 30px;
+}
+
+.Boardmain h2 {
+    color: #4176ff;
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.Boardmain p {
+    text-align: left;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.Copyright {
+    margin-top: 20px;
+    border-top: 1px solid #333;
+    padding-top: 10px;
+    color: #555;
+    font-size: 12px;
+}

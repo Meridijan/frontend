@@ -1,0 +1,19 @@
+.AboutUs {
+    padding: 50px;
+    text-align: center;
+    color: white;
+    background-color: #222;
+}
+
+.AboutUs h1 {
+    font-size: 48px;
+    color: #4176ff;
+    margin-bottom: 20px;
+}
+
+.AboutUs p {
+    font-size: 24px;
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.6;
+}
