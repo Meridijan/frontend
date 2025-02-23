@@ -5,11 +5,12 @@
     justify-content: center;
     text-align: center;
     color: rgb(245, 245, 245);
-    height: 100vh;
+    height: 85vh;
     background-size: cover;
-    /*background-image: url('../assets/img/bg-image.png');*/
     background-position: center;
     position: relative;
+    width: 100%;
+    margin: auto;
     
 }
 
