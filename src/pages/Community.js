@@ -1,20 +1,32 @@
 import React, { useEffect, useState } from "react";
+import Navbar from '../components/Navbar';
 
 function Community() {
+    
     
     const [message, setMessage ] = useState("");
     const [messages, setMessages] = useState([]);
 
     useEffect(() => {
-        fetch("/api/discord/messages")
-        .then((res) => res.json())
+        fetch("http://localhost:5000/api/discord/messages")
+        .then((res) => {
+            if(!res.ok){
+                throw new Error(`HTTP error! Status: ${res.status}`);
+            }
+            return res.json();
+        })
         .then((data) => setMessages(data))
         .catch((error) => console.error("Error fetching messages:", error));
     }, []);
 
     // Send Discord messages to announcments
     const sendToDiscord = async () => {
-        const webhookURL = process.env.DISCORD_HOOK_URL;
+        const webhookURL = process.env.REACT_APP_DISCORD_HOOK_URL;
+
+        if(!webhookURL){
+            console.error("Webhook URL is missing");
+            return;
+        }
 
         const payload = {
             content: message,
@@ -33,6 +45,9 @@ function Community() {
 
   return (
     <div className="Community">
+      <div>
+        <Navbar />
+      </div>
     <h1>Community Announcements</h1>
     <ul>
         {messages.map((msg) => (
